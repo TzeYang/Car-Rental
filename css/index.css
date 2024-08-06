@@ -1,0 +1,203 @@
+main {
+  padding: 20px 30px;
+}
+
+.billboard-container {
+  width: 100%;
+  height: 600px;
+}
+
+.billboard {
+  background-image: url(../img/billboard.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.billboard-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.billboard-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 1;
+  gap: 10px;
+}
+
+.billboard-title > h1 {
+  font-size: 90px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+.billboard-title > button {
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: #3572ef;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 999px;
+  transition: background-color 0.3s;
+}
+
+.billboard-title > button:hover {
+  background-color: #4f88f9;
+}
+
+.billboard-title > button:active {
+  background-color: #1b5fe7;
+}
+
+.showcase-container {
+  margin-top: 48px;
+}
+
+.showcase-container > h2 {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3572ef;
+  margin-bottom: 20px;
+}
+
+.card-carousel {
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  gap: 14px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  min-width: 280px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  background-color: #3572ef;
+}
+
+.card-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.card-info > h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.card-info > button {
+  width: fit-content;
+  padding: 6px 12px;
+  background-color: #3572ef;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 999px;
+  transition: background-color 0.3s;
+}
+
+.card-info > button:hover {
+  background-color: #4f88f9;
+}
+
+.card-info > button:active {
+  background-color: #1b5fe7;
+}
+
+.btn-scroll {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3572ef;
+}
+
+.btn-scroll:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px;
+}
+
+.scroll-left {
+  left: 0;
+  margin-left: -10px;
+}
+
+.scroll-right {
+  right: 0;
+  margin-right: -10px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .billboard-title > h1 {
+    font-size: 60px;
+  }
+
+  .billboard-title > button {
+    font-size: 12px;
+  }
+
+  .card {
+    min-width: 200px;
+  }
+
+  .card-info > h3 {
+    font-size: 16px;
+  }
+
+  .card-info > button {
+    font-size: 12px;
+  }
+}

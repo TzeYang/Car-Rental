@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AZoom Car Rental | Register</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
+  <body>
+    <header>
+      <p id="header-logo">AZoom</p>
+
+      <div class="button-container">
+        <button id="btn-login" class="btn-login">Login</button>
+        <button id="btn-register" class="btn-register">Register</button>
+        <button id="btn-my-account" class="btn-login">My Account</button>
+        <button id="btn-logout" class="btn-register">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="illustration"></div>
+      <div class="form-container">
+        <h1>Register to AZoom</h1>
+        <form id="register-form" onsubmit="event.preventDefault()">
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div>
+            <label for="confirm-password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+            />
+          </div>
+
+          <button type="button" id="btn-form-register">Register</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-info-container">
+        <h1>AZoom</h1>
+        <p>
+          AZoom Car Rental is an electric car rental company based in Australia
+          founded in 2024. We provide the latest electric car to be rent in a
+          competitive price.
+        </p>
+        <p>Copyright &copy AZoom 2024</p>
+      </div>
+
+      <div class="footer-link-container">
+        <h3>Links</h3>
+        <a href="./car-list.html">Car List</a>
+        <a href="./my-account.html">My Account</a>
+      </div>
+    </footer>
+    <script src="./js/global.js"></script>
+    <script src="./js/register.js"></script>
+  </body>
+</html>

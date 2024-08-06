@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AZoom Car Rental | Rent a Car</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/car.css" />
+  </head>
+  <body>
+    <header>
+      <p id="header-logo">AZoom</p>
+
+      <div class="button-container">
+        <button id="btn-login" class="btn-login">Login</button>
+        <button id="btn-register" class="btn-register">Register</button>
+        <button id="btn-my-account" class="btn-login">My Account</button>
+        <button id="btn-logout" class="btn-register">Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="detail-container">
+        <div>
+          <img src="./img/car-1.jpg" alt="Hyundai Kona Electric" />
+
+          <div class="price-container">
+            <p>$100/day</p>
+          </div>
+        </div>
+
+        <h1>Hyundai Kona Electric</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+          voluptatem aliquam. Laudantium adipisci, sint perferendis
+          necessitatibus sed possimus voluptate, quasi incidunt omnis voluptatum
+          illo consectetur odit nisi aspernatur ullam veritatis!
+        </p>
+      </div>
+
+      <form
+        id="reservation-detail"
+        class="reservation-container"
+        onsubmit="event.preventDefault()"
+      >
+        <h2>Make a Reservation</h2>
+
+        <div>
+          <label for="rental-date">Rental Date:</label>
+          <input type="date" id="rental-date" name="rental-date" required />
+        </div>
+
+        <div>
+          <label for="rental-period">Rental Period:</label>
+          <select name="rental-period" id="rental-period" required>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+
+        <div>
+          <h3>Total Price:</h3>
+          <p id="total-price">$100</p>
+        </div>
+
+        <button type="button" id="btn-continue" class="btn-submit">
+          Continue to Payment Detail
+        </button>
+      </form>
+
+      <form
+        id="payment-detail"
+        class="payment-container"
+        onsubmit="event.preventDefault()"
+      >
+        <h2>Payment Detail</h2>
+
+        <div>
+          <label for="full-name">Full Name:</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            required
+            placeholder="John Doe"
+            value=""
+          />
+        </div>
+        <div>
+          <label for="card-number">Card Number:</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            required
+            placeholder="1234 5678 9012 3456"
+          />
+        </div>
+
+        <div>
+          <label for="expiry-date">Expiry Date:</label>
+          <input
+            type="text"
+            id="expiry-date"
+            name="expiry-date"
+            required
+            placeholder="MM/YY"
+          />
+        </div>
+
+        <div>
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" required placeholder="123" />
+        </div>
+
+        <button type="button" id="btn-pay" class="btn-submit">Pay Now</button>
+        <button type="button" id="btn-back" class="btn-back">Back</button>
+      </form>
+
+      <form id="success-message">
+        <h2>Payment Success!</h2>
+        <p>
+          Your payment is succeed and your reservation will be processed as soon
+          as possible. Thank you for making a reservation!
+        </p>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-info-container">
+        <h1>AZoom</h1>
+        <p>
+          AZoom Car Rental is an electric car rental company based in Australia
+          founded in 2024. We provide the latest electric car to be rent in a
+          competitive price.
+        </p>
+        <p>Copyright &copy AZoom 2024</p>
+      </div>
+
+      <div class="footer-link-container">
+        <h3>Links</h3>
+        <a href="./car-list.html">Car List</a>
+        <a href="./my-account.html">My Account</a>
+      </div>
+    </footer>
+    <script src="./js/global.js"></script>
+    <script src="./js/car.js"></script>
+  </body>
+</html>
